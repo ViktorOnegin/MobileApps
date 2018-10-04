@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:minWidth="25px"
+	android:minHeight="25px">
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/linearLayout1">
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="34.5dp"
+			android:id="@+id/linearLayout2" >
+			<EditText
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="170.0dp"
+				android:layout_height="42.5dp"
+				android:id="@+id/textView1" />
+			<Button
+				android:text="Search"
+				android:layout_width="128.0dp"
+				android:layout_height="match_parent"
+				android:id="@+id/button1" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="174.0dp"
+			android:id="@+id/linearLayout3">
+			<TextView
+				android:text="City"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:layout_height="36.0dp"
+				android:id="@+id/textView2"
+				android:gravity="center" />
+			<TextView
+				android:text="Temp"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:layout_height="31.0dp"
+				android:id="@+id/textView3" />
+			<TextView
+				android:text="Wind speed"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:layout_height="33.0dp"
+				android:id="@+id/textView4" />
+			<TextView
+				android:text="Main pressure"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:layout_height="41.0dp"
+				android:id="@+id/textView5" />
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>
