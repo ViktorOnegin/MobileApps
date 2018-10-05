@@ -7,6 +7,7 @@
 	android:layout_height="match_parent"
 	android:minWidth="25px"
 	android:minHeight="25px">
+	android:background="@color/blue"
 	<LinearLayout
 		android:orientation="vertical"
 		android:minWidth="25px"
@@ -20,51 +21,127 @@
 			android:minHeight="25px"
 			android:layout_width="match_parent"
 			android:layout_height="34.5dp"
-			android:id="@+id/linearLayout2" >
+			android:id="@+id/linearLayout2"
+			android:layout_marginBottom="29.0dp">
 			<EditText
 				android:text=""
 				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="170.0dp"
-				android:layout_height="42.5dp"
+				android:layout_width="157.0dp"
+				android:layout_height="44.0dp"
+				android:inputType="text"
 				android:id="@+id/textView1" />
 			<Button
 				android:text="Search"
-				android:layout_width="128.0dp"
+				android:layout_width="101.0dp"
 				android:layout_height="match_parent"
 				android:id="@+id/button1" />
 		</LinearLayout>
 		<LinearLayout
-			android:orientation="vertical"
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="382.5dp"
+			android:layout_height="33.5dp"
+			android:id="@+id/linearLayout3"
+			android:layout_marginTop="6.0dp"
+			android:layout_marginBottom="0.0dp">
+			<TextView
+				android:text="Temp :"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="159.5dp"
+				android:layout_height="match_parent"
+				android:id="@+id/textView2" />
+			<TextView
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/textView4" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:layout_width="match_parent"
-			android:layout_height="174.0dp"
-			android:id="@+id/linearLayout3">
+			android:layout_height="40.5dp"
+			android:id="@+id/linearLayout4"
+			android:layout_marginBottom="0.0dp"
+			android:layout_marginTop="7.0dp">
 			<TextView
-				android:text="City"
+				android:text="Wind speed :"
 				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="match_parent"
-				android:layout_height="36.0dp"
-				android:id="@+id/textView2"
-				android:gravity="center" />
-			<TextView
-				android:text="Temp"
-				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="match_parent"
-				android:layout_height="31.0dp"
+				android:layout_width="159.0dp"
+				android:layout_height="30.0dp"
 				android:id="@+id/textView3" />
 			<TextView
-				android:text="Wind speed"
+				android:text=""
 				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="match_parent"
-				android:layout_height="33.0dp"
-				android:id="@+id/textView4" />
-			<TextView
-				android:text="Main pressure"
-				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="match_parent"
-				android:layout_height="41.0dp"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
 				android:id="@+id/textView5" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="34.0dp"
+			android:id="@+id/linearLayout5"
+			android:layout_marginBottom="6.5dp">
+			<TextView
+				android:text="Pressure :"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="158.5dp"
+				android:layout_height="41.0dp"
+				android:id="@+id/textView3" />
+			<TextView
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/textView6" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="30.0dp"
+			android:id="@+id/linearLayout6"
+			android:layout_marginBottom="9.0dp">
+			<TextView
+				android:text="Visibility :"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="158.0dp"
+				android:layout_height="match_parent"
+				android:id="@+id/textView3" />
+			<TextView
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/textView7" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="32.0dp"
+			android:id="@+id/linearLayout7"
+			android:layout_marginBottom="0.0dp">
+			<TextView
+				android:text="Humidity :"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="158.5dp"
+				android:layout_height="match_parent"
+				android:id="@+id/textView3" />
+			<TextView
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/textView8" />
 		</LinearLayout>
 	</LinearLayout>
 </RelativeLayout>
