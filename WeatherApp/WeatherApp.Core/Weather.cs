@@ -13,5 +13,6 @@ namespace WeatherApp.Core
         public string pressure { get; set; } = " ";
         public string Visibility { get; set; } = " ";
         public string Humidity { get; set; } = " ";
+        public string Icon { get; set; } = " ";
     }
 }

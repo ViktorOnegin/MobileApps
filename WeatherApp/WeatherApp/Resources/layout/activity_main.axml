@@ -150,5 +150,21 @@
 				android:layout_height="match_parent"
 				android:id="@+id/textView8" />
 		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="186.0dp"
+			android:id="@+id/linearLayout8"
+			android:layout_marginTop="22.5dp" >
+			<ImageView
+				android:src="@drawable/sun"
+				android:layout_width="210.5dp"
+				android:layout_height="match_parent"
+				android:id="@+id/imageView1"
+				android:visibility="invisible"
+				android:layout_marginLeft="86.0dp" />
+		</LinearLayout>
 	</LinearLayout>
 </RelativeLayout>

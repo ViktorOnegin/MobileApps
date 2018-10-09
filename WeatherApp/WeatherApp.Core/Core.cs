@@ -20,6 +20,7 @@ namespace WeatherApp.Core
             weather.pressure = (string)results["main"]["pressure"] + " hpa";
             weather.Visibility = (string)results["weather"][0]["main"];
             weather.Humidity = (string)results["main"]["humidity"] + " %";
+            weather.Icon = (string)results["weather"][0]["icon"];
 
             return weather;
         }
