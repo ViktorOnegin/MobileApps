@@ -27,16 +27,18 @@
 			<EditText
 				android:text=""
 				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="157.0dp"
+				android:layout_width="254.5dp"
 				android:layout_height="43.5dp"
 				android:inputType="text"
 				android:id="@+id/textView1"
 				android:layout_marginBottom="0.0dp" />
 			<Button
 				android:text="Search"
-				android:layout_width="101.0dp"
+				android:layout_width="126.5dp"
 				android:layout_height="match_parent"
-				android:id="@+id/button1" />
+				android:id="@+id/button1"
+				android:layout_marginRight="0.0dp"
+				android:layout_marginLeft="0.0dp" />
 		</LinearLayout>
 		<LinearLayout
 			android:orientation="horizontal"
@@ -164,7 +166,23 @@
 				android:layout_height="match_parent"
 				android:id="@+id/imageView1"
 				android:visibility="invisible"
-				android:layout_marginLeft="86.0dp" />
+				android:layout_marginLeft="80.5dp"
+				android:layout_marginBottom="6.5dp" />
 		</LinearLayout>
+		<Button
+			android:text="5 day forecast"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/button2"
+			android:layout_marginTop="0.0dp"
+			android:layout_marginLeft="221.0dp" />
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/linearLayout9"
+			android:layout_marginTop="44.5dp" />
 	</LinearLayout>
 </RelativeLayout>

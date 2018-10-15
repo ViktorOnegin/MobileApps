@@ -17,8 +17,10 @@ namespace WeatherApp
             SetContentView(Resource.Layout.activity_main);
 
             var SearchButton = FindViewById<Button>(Resource.Id.button1);
+            var ForecastButton = FindViewById<Button>(Resource.Id.button2);
 
             SearchButton.Click += SearchButton_Click;
+            ForecastButton.Click += ForecastButton_Click;
         }
 
         private async void SearchButton_Click(object sender, System.EventArgs e)
@@ -58,7 +60,7 @@ namespace WeatherApp
                 case ("09d"):
                     icon.SetImageResource(Resource.Drawable.Rainy);
                     break;
-
+                    
                 case ("10d"):
                     icon.SetImageResource(Resource.Drawable.Rainy);
                     break;
@@ -76,6 +78,24 @@ namespace WeatherApp
                     break;
 
             }
+
+        }
+
+        private async void ForecastButton_Click(object sender, System.EventArgs e)
+        {
+
+            var secondActivity = new Intent(this, typeof(SecondActivity));
+            StartActivity(secondActivity);
+
+            var editText = FindViewById<EditText>(Resource.Id.textView1);
+            var tempMin = FindViewById<TextView>(Resource.Id.textView1);
+            var tempMax = FindViewById<TextView>(Resource.Id.textView2);
+            //var icon = FindViewById<ImageView>(Resource.Id.imageView1);
+
+            var forecast = await Core.Core.GetForecast(editText.Text);
+
+            tempMin.Text = forecast.TemperatureMin;
+            tempMax.Text = forecast.TemperatureMax;
 
         }
     }

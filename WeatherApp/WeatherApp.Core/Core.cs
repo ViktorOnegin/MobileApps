@@ -24,5 +24,20 @@ namespace WeatherApp.Core
 
             return weather;
         }
+
+        public static async Task<Forecast> GetForecast(string city)
+        {
+            string key = "1dad50e251b03e9137b8b650a95bc9ff";
+            string queryString = "http://api.openweathermap.org/data/2.5/forecast?q" + city + "&units=metric&appid=" + key;
+
+            dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
+
+            var forecast = new Forecast();
+            forecast.TemperatureMin = (string)results["list"][0]["main"]["temp_min"] + " °C";
+            forecast.TemperatureMax = (string)results["list"][0]["main"]["temp_max"] + " °C";
+            forecast.Icon = (string)results["list"][0]["weather"][0]["icon"];
+
+            return forecast;
+        }
     }
 }
