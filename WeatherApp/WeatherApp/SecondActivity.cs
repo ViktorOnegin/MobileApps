@@ -10,13 +10,14 @@ using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using WeatherApp.Core;
 
 namespace WeatherApp
 {
     [Activity(Label = "SecondActivity")]
     public class SecondActivity : AppCompatActivity
     {
-        string[] countries = new string[] { "Eesti", "Soome", "Rootsi" };
+        ListView list;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -26,11 +27,19 @@ namespace WeatherApp
 
             // Create your application here
 
-            var list = FindViewById<ListView>(Resource.Id.listView1);
+            list = FindViewById<ListView>(Resource.Id.listView1);
 
-            list.Adapter = new CustomAdapter(this, countries);
+            LoadWeather();
+            
             //ListView.ItemClick += ListView_ItemClick;
 
+        }
+
+        public async void LoadWeather()
+        {
+            Forecast[] weathers = await Core.Core.GetForecast("tallinn");
+
+            list.Adapter = new CustomAdapter(this, weathers);
         }
 
         public void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs args)

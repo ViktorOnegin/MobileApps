@@ -9,21 +9,22 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using WeatherApp.Core;
 
 namespace WeatherApp
 {
-    public class CustomAdapter : BaseAdapter<string>
+    public class CustomAdapter : BaseAdapter<Forecast>
     {
-        string[] items;
+        Forecast[] items;
         Activity context;
 
-        public CustomAdapter(Activity context, string[] items) : base()
+        public CustomAdapter(Activity context, Forecast[] items) : base()
         {
             this.context = context;
             this.items = items;
         }
 
-        public override string this[int position]
+        public override Forecast this[int position]
         {
             get { return items[position]; }
         }
@@ -44,7 +45,7 @@ namespace WeatherApp
             if (view == null)
                 view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow , null);
 
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position];
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].TemperatureMax;
 
             return view;
 
