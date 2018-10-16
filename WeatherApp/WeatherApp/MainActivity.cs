@@ -81,22 +81,10 @@ namespace WeatherApp
 
         }
 
-        private async void ForecastButton_Click(object sender, System.EventArgs e)
+        private void ForecastButton_Click(object sender, System.EventArgs e)
         {
-
             var secondActivity = new Intent(this, typeof(SecondActivity));
             StartActivity(secondActivity);
-
-            var editText = FindViewById<EditText>(Resource.Id.textView1);
-            var tempMin = FindViewById<TextView>(Resource.Id.textView1);
-            var tempMax = FindViewById<TextView>(Resource.Id.textView2);
-            //var icon = FindViewById<ImageView>(Resource.Id.imageView1);
-
-            var forecast = await Core.Core.GetForecast(editText.Text);
-
-            tempMin.Text = forecast.TemperatureMin;
-            tempMax.Text = forecast.TemperatureMax;
-
         }
     }
 }
