@@ -42,8 +42,10 @@ namespace WeatherApp
         {
             View view = convertView;
             if (view == null)
-                view = context.LayoutInflater.Inflate(Resource.Layout.Second_Activity , null);
+                view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow , null);
+
             view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position];
+
             return view;
 
 
