@@ -27,7 +27,7 @@
 			<EditText
 				android:text=""
 				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:layout_width="254.5dp"
+				android:layout_width="263.5dp"
 				android:layout_height="43.5dp"
 				android:inputType="text"
 				android:id="@+id/textView1"
@@ -166,15 +166,16 @@
 				android:layout_height="match_parent"
 				android:id="@+id/imageView1"
 				android:visibility="invisible"
-				android:layout_marginLeft="80.5dp"
-				android:layout_marginBottom="6.5dp" />
+				android:layout_marginLeft="103.0dp"
+				android:layout_marginBottom="6.5dp"
+				android:layout_marginRight="1.5dp" />
 		</LinearLayout>
 		<Button
-			android:text="5 day forecast"
+			android:text="forecast"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/button2"
-			android:layout_marginTop="0.0dp"
+			android:layout_marginTop="30.0dp"
 			android:layout_marginLeft="221.0dp" />
 		<LinearLayout
 			android:orientation="horizontal"

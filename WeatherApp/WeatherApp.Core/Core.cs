@@ -10,7 +10,7 @@ namespace WeatherApp.Core
         public static async Task<Weather> GetWeather(string city)
         {
             string key = "1dad50e251b03e9137b8b650a95bc9ff";
-            string queryString = "http://api.openweathermap.org/data/2.5/weather?q="+ city +"&units=metric&appid="+ key;
+            string queryString = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + key;
 
             dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
 
@@ -33,9 +33,16 @@ namespace WeatherApp.Core
             dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
 
             var forecast = new Forecast();
-            forecast.TemperatureMin = (string)results["list"][0]["main"]["temp_low"] + " °C";
+            forecast.TemperatureMin = (string)results["list"][0]["main"]["temp_min"] + " °C";
             forecast.TemperatureMax = (string)results["list"][0]["main"]["temp_max"] + " °C";
-            forecast.Icon = (string)results["list"][0]["weather"][0]["icon"];
+
+            DateTime time = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
+            DateTime date = time.AddSeconds((double)results["list"][0]["dt"]);
+            forecast.data = date.ToString();
+
+            
+
+            //forecast.Icon = (string)results["list"][0]["weather"][0]["icon"];
 
             var forecasts = new Forecast[1];
             forecasts[0] = forecast;

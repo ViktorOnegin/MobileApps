@@ -45,7 +45,9 @@ namespace WeatherApp
             if (view == null)
                 view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow , null);
 
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].TemperatureMax;
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].data;
+            view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].TemperatureMin;
+            view.FindViewById<TextView>(Resource.Id.textView4).Text = items[position].TemperatureMax;
 
             return view;
 
