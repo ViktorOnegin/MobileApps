@@ -4,10 +4,13 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using Android.Content;
+using Android.Content.PM;
 
 namespace WeatherApp
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Icon = "@drawable/Storm1" , Theme = "@style/AppTheme", MainLauncher = true ,
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -17,8 +20,10 @@ namespace WeatherApp
             SetContentView(Resource.Layout.activity_main);
 
             var SearchButton = FindViewById<Button>(Resource.Id.button1);
+            var ForecastButton = FindViewById<Button>(Resource.Id.button2);
 
             SearchButton.Click += SearchButton_Click;
+            ForecastButton.Click += ForecastButton_Click;
         }
 
         private async void SearchButton_Click(object sender, System.EventArgs e)
@@ -58,7 +63,7 @@ namespace WeatherApp
                 case ("09d"):
                     icon.SetImageResource(Resource.Drawable.Rainy);
                     break;
-
+                    
                 case ("10d"):
                     icon.SetImageResource(Resource.Drawable.Rainy);
                     break;
@@ -77,6 +82,12 @@ namespace WeatherApp
 
             }
 
+        }
+
+        private void ForecastButton_Click(object sender, System.EventArgs e)
+        {
+            var secondActivity = new Intent(this, typeof(SecondActivity));
+            StartActivity(secondActivity);
         }
     }
 }

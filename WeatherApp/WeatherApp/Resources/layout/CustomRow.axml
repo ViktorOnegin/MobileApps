@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:minWidth="25px"
+	android:minHeight="25px">
+	<TextView
+		android:text="Date"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textColor="#ffe95858"
+		android:id="@+id/textView1" />
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="31.5dp"
+		android:id="@+id/linearLayout1"
+		android:layout_marginTop="6.5dp">
+		<TextView
+			android:text="TempMin"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/textView2" />
+		<TextView
+			android:text=" / "
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/textView3" />
+		<TextView
+			android:text="TempMax"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="122.5dp"
+			android:layout_height="match_parent"
+			android:id="@+id/textView4" />
+		<ImageView
+			android:src="@android:drawable/ic_menu_gallery"
+			android:layout_width="wrap_content"
+			android:layout_height="36.5dp"
+			android:id="@+id/imageView1"
+			android:layout_marginLeft="87.0dp" />
+	</LinearLayout>
+
+</LinearLayout>
