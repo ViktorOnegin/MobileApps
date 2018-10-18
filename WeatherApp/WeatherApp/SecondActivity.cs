@@ -37,7 +37,7 @@ namespace WeatherApp
 
         public async void LoadWeather()
         {
-            Forecast[] weathers = await Core.Core.GetForecast("tallinn");
+            var weathers = await Core.Core.GetForecast("tallinn");
 
             list.Adapter = new CustomAdapter(this, weathers);
         }
