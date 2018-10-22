@@ -17,7 +17,7 @@
 		android:background="#00ffff"
 		android:id="@+id/linearLayout1">
 		<LinearLayout
-			android:background="#ffe95858"
+			android:background="#fffbee1a"
 			android:orientation="horizontal"
 			android:minWidth="25px"
 			android:minHeight="25px"
@@ -59,7 +59,7 @@
 				android:id="@+id/textView2" />
 			<TextView
 				android:text=""
-				android:textColor="#ffe95858"
+				android:textColor="#fffbee1a"
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
@@ -82,7 +82,7 @@
 				android:id="@+id/textView3" />
 			<TextView
 				android:text=""
-				android:textColor="#ffe95858"
+				android:textColor="#fffbee1a"
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
@@ -104,7 +104,7 @@
 				android:id="@+id/textView3" />
 			<TextView
 				android:text=""
-				android:textColor="#ffe95858"
+				android:textColor="#fffbee1a"
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
@@ -126,7 +126,7 @@
 				android:id="@+id/textView3" />
 			<TextView
 				android:text=""
-				android:textColor="#ffe95858"
+				android:textColor="#fffbee1a"
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
@@ -148,7 +148,7 @@
 				android:id="@+id/textView3" />
 			<TextView
 				android:text=""
-				android:textColor="#ffe95858"
+				android:textColor="#fffbee1a"
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"

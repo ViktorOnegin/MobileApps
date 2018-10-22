@@ -2318,7 +2318,7 @@ namespace WeatherApp
 			public const int Rainy = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int Rainy1 = 2130837610;
+			public const int rainy1 = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
 			public const int Snowy = 2130837611;

@@ -56,12 +56,12 @@ namespace WeatherApp
                     icon.SetImageResource(Resource.Drawable.CloudAndSun);
                     break;
 
-                case ("03d"):
+                case ("04d"):
                     icon.SetImageResource(Resource.Drawable.Cloudy);
                     break;
 
                 case ("09d"):
-                    icon.SetImageResource(Resource.Drawable.Rainy);
+                    icon.SetImageResource(Resource.Drawable.rainy1);
                     break;
                     
                 case ("10d"):

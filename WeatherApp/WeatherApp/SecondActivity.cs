@@ -30,9 +30,6 @@ namespace WeatherApp
             list = FindViewById<ListView>(Resource.Id.listView1);
 
             LoadWeather();
-            
-            //ListView.ItemClick += ListView_ItemClick;
-
         }
 
         public async void LoadWeather()

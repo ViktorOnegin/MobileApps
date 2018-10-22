@@ -135,7 +135,7 @@
     <AndroidResource Include="Resources\drawable\Rainy.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Rainy1.png" />
+    <AndroidResource Include="Resources\drawable\rainy1.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Second_Activity.axml">
