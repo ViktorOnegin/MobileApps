@@ -2327,16 +2327,16 @@ namespace WeatherApp
 			public const int Storm = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int Storm1 = 2130837613;
+			public const int Sun = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int Sun = 2130837614;
+			public const int tooltip_frame_dark = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int tooltip_frame_dark = 2130837615;
+			public const int tooltip_frame_light = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int tooltip_frame_light = 2130837616;
+			public const int WeatherAppIcon = 2130837616;
 			
 			// aapt resource value: 0x7f020071
 			public const int Windy = 2130837617;

@@ -5,10 +5,13 @@ using Android.Runtime;
 using Android.Widget;
 using Android.Content;
 using Android.Content.PM;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace WeatherApp
 {
-    [Activity(Label = "@string/app_name", Icon = "@drawable/Storm1" , Theme = "@style/AppTheme", MainLauncher = true ,
+    [Activity(Label = "@string/app_name", Icon = "@drawable/WeatherAppIcon" , Theme = "@style/AppTheme", MainLauncher = true ,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 
     public class MainActivity : AppCompatActivity
@@ -18,6 +21,7 @@ namespace WeatherApp
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+            AppCenter.Start("b6339322-7b63-4bf5-8f87-9e5f6f059540", typeof(Analytics), typeof(Crashes));
 
             var SearchButton = FindViewById<Button>(Resource.Id.button1);
             var ForecastButton = FindViewById<Button>(Resource.Id.button2);
