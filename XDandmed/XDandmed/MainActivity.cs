@@ -15,25 +15,29 @@ namespace XDandmed
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+            //var editText = FindViewById<EditText>(Resource.Id.editText);
+            //var textView = FindViewById<TextView>(Resource.Id.textView);
+            //editText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => {
+            //    textView.Text = e.Text.ToString();
+            //};
+            //int count = 0;
+            //var LIKEbtn = FindViewById<Button>(Resource.Id.button1);
+            //var DISLIKEbtn = FindViewById<Button>(Resource.Id.button2);
 
-            int count = 0;
-            var LIKEbtn = FindViewById<Button>(Resource.Id.button1);
-            var DISLIKEbtn = FindViewById<Button>(Resource.Id.button2);
+            //var likeNUM = FindViewById<TextView>(Resource.Id.textView5);
+            //var dislikeNUM = FindViewById<TextView>(Resource.Id.textView6);
 
-            var likeNUM = FindViewById<TextView>(Resource.Id.textView5);
-            var dislikeNUM = FindViewById<TextView>(Resource.Id.textView6);
+            //LIKEbtn.Click += delegate
+            //{
+            //    count++;
+            //    likeNUM.Text = "" + count;
+            //};
 
-            LIKEbtn.Click += delegate
-            {
-                count++;
-                likeNUM.Text = "" + count;
-            };
-
-            DISLIKEbtn.Click += delegate
-            {
-                count++;
-                dislikeNUM.Text = "" + count;
-            };
+            //DISLIKEbtn.Click += delegate
+            //{
+            //    count++;
+            //    dislikeNUM.Text = "" + count;
+            //};
 
             List<Andmed> stuf = new List<Andmed>();
             stuf.Add(
