@@ -12,18 +12,18 @@ using Android.Widget;
 
 namespace XDandmed
 {
-    public class CustomAdapter : BaseAdapter<string>
+    class CustomAdapter : BaseAdapter<Andmed>
     {
-        List<string> items;
+        List<Andmed> items;
         Activity context;
 
-        public CustomAdapter(Activity context, List<string> items) : base()
+        public CustomAdapter(Activity context, List<Andmed> items) : base()
         {
             this.context = context;
             this.items = items;
         }
 
-        public override string this[int position]
+        public override Andmed this[int position]
         {
             get { return items[position]; }
         }
@@ -41,14 +41,8 @@ namespace XDandmed
             if (view == null)
                 view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow, null);
             
-            //view.FindViewById<ImageView>(Resource.Id.imageView1).Text = items[position];
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position];
-            view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position];
-            view.FindViewById<EditText>(Resource.Id.textView4).Text = items[position];
-            view.FindViewById<Button>(Resource.Id.nupp1).Text = items[position];
-            view.FindViewById<Button>(Resource.Id.button2).Text = items[position];
-            view.FindViewById<TextView>(Resource.Id.textView5).Text = items[position];
-            view.FindViewById<TextView>(Resource.Id.textView6).Text = items[position];
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Name;
+            view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Date;
 
             return view;
         }

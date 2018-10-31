@@ -2432,6 +2432,9 @@ namespace XDandmed
 			// aapt resource value: 0x7f08003d
 			public const int bottom = 2131230781;
 			
+			// aapt resource value: 0x7f080095
+			public const int button1 = 2131230869;
+			
 			// aapt resource value: 0x7f080097
 			public const int button2 = 2131230871;
 			
@@ -2647,9 +2650,6 @@ namespace XDandmed
 			
 			// aapt resource value: 0x7f0800af
 			public const int notification_main_column_container = 2131230895;
-			
-			// aapt resource value: 0x7f080095
-			public const int nupp1 = 2131230869;
 			
 			// aapt resource value: 0x7f08004c
 			public const int parallax = 2131230796;
