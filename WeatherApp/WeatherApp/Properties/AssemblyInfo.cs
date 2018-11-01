@@ -18,7 +18,7 @@ using Android.App;
 
 // Version information for an assembly consists of the following four values:
 //
-//      Major Version
+//      Major Version Gert is the best, i'm a fuckboy
 //      Minor Version 
 //      Build Number
 //      Revision
