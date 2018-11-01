@@ -16,6 +16,10 @@ namespace XDandmed
     {
         List<Andmed> items;
         Activity context;
+        TextView LikeNUM;
+        TextView DislikeNUM;
+        int Count1 = 0;
+        int Count2 = 0;
 
         public CustomAdapter(Activity context, List<Andmed> items) : base()
         {
@@ -44,7 +48,40 @@ namespace XDandmed
             view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Name;
             view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Date;
 
+            EditText editText = view.FindViewById<EditText>(Resource.Id.editText1);
+            TextView textView = view.FindViewById<TextView>(Resource.Id.textView3);
+
+            LikeNUM = view.FindViewById<TextView>(Resource.Id.textView4);
+            DislikeNUM = view.FindViewById<TextView>(Resource.Id.textView5);
+
+            Button LIKEbtn = view.FindViewById<Button>(Resource.Id.button1);
+            Button DISLIKEbtn = view.FindViewById<Button>(Resource.Id.button2);
+
+            editText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            {
+                textView.Text = e.Text.ToString();
+            };
+
+            LIKEbtn.Click -= LIKEbtn_Click;
+            LIKEbtn.Click += LIKEbtn_Click;
+
+            DISLIKEbtn.Click -= DISLIKEbtn_Click;
+            DISLIKEbtn.Click += DISLIKEbtn_Click;
+            LikeNUM.Text = "asdasdas";
+
             return view;
+        }
+
+        private void DISLIKEbtn_Click(object sender, EventArgs e)
+        {
+            Count2++;
+            DislikeNUM.Text = "" + Count2;
+        }
+
+        private void LIKEbtn_Click(object sender, EventArgs e)
+        {
+            Count1++;
+            LikeNUM.Text = "" + Count1;
         }
     }
 }
