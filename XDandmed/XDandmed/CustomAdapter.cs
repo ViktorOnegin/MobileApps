@@ -67,7 +67,6 @@ namespace XDandmed
 
             DISLIKEbtn.Click -= DISLIKEbtn_Click;
             DISLIKEbtn.Click += DISLIKEbtn_Click;
-            LikeNUM.Text = "asdasdas";
 
             return view;
         }

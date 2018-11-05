@@ -4,6 +4,8 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using System.Collections.Generic;
+using Android.Content;
+using System;
 
 namespace XDandmed
 {
@@ -16,14 +18,28 @@ namespace XDandmed
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
+            //var List = new List<Andmed>();
+            //Andmed andmed = new Andmed
+            //{
+            //    Date = "20.02.2012",
+            //    Name = "Viktor Onegin"
+            //};
+            //List.Add(andmed);
 
             List<Andmed> stuf = new List<Andmed>();
             stuf.Add(
                 new Andmed
                 {
-                    Date = "20.02.2012",
+                    Date = DateTime.Now.ToString("dd/MM/yy"),
                     Name = "Viktor Onegin"
                 });
+
+            //stuf.Add(
+            //    new Andmed
+            //    {
+            //        Date = "20.02.2012",
+            //        Name = "Obama"
+            //    });
 
             ListView list = FindViewById<ListView>(Resource.Id.listView1);
             list.Adapter = new CustomAdapter(this, stuf);
