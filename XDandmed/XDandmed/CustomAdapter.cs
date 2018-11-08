@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Android.Support.V7.App;
 
 using Android.App;
 using Android.Content;
@@ -17,9 +18,7 @@ namespace XDandmed
         List<Andmed> items;
         Activity context;
         TextView LikeNUM;
-        TextView DislikeNUM;
         int Count1 = 0;
-        int Count2 = 0;
 
         public CustomAdapter(Activity context, List<Andmed> items) : base()
         {
@@ -41,40 +40,40 @@ namespace XDandmed
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            View view = convertView;
-            if (view == null)
-                view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow, null);
-            
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Name;
-            view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Date;
+            View view1 = convertView;
+            if (view1 == null)
+                view1 = context.LayoutInflater.Inflate(Resource.Layout.CustomRow1, null);
 
-            EditText editText = view.FindViewById<EditText>(Resource.Id.editText1);
-            TextView textView = view.FindViewById<TextView>(Resource.Id.textView3);
+            view1.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Name;
+            view1.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Date;
+            view1.FindViewById<TextView>(Resource.Id.textView3).Text = items[position].Message;
 
-            LikeNUM = view.FindViewById<TextView>(Resource.Id.textView4);
-            DislikeNUM = view.FindViewById<TextView>(Resource.Id.textView5);
+            View view2 = convertView;
+            if (view2 == null)
+                view2 = context.LayoutInflater.Inflate(Resource.Layout.CustomRow2, null);
 
-            Button LIKEbtn = view.FindViewById<Button>(Resource.Id.button1);
-            Button DISLIKEbtn = view.FindViewById<Button>(Resource.Id.button2);
+            view2.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Name;
+            view2.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Date;
+            view2.FindViewById<TextView>(Resource.Id.textView3).Text = items[position].Message;
 
-            editText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
-            {
-                textView.Text = e.Text.ToString();
-            };
+            //TextView textView = view1.FindViewById<TextView>(Resource.Id.textView3);
+
+            LikeNUM = view1.FindViewById<TextView>(Resource.Id.textView4);
+
+            Button LIKEbtn = view1.FindViewById<Button>(Resource.Id.button1);
+
+            Button COMMENTbtn = view1.FindViewById<Button>(Resource.Id.button2);
+            //editText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            //{
+            //    textView.Text = e.Text.ToString();
+            //};
 
             LIKEbtn.Click -= LIKEbtn_Click;
             LIKEbtn.Click += LIKEbtn_Click;
 
-            DISLIKEbtn.Click -= DISLIKEbtn_Click;
-            DISLIKEbtn.Click += DISLIKEbtn_Click;
+            //COMMENTbtn.Click += COMMENTbtn_Click;
 
-            return view;
-        }
-
-        private void DISLIKEbtn_Click(object sender, EventArgs e)
-        {
-            Count2++;
-            DislikeNUM.Text = "" + Count2;
+            return view1;
         }
 
         private void LIKEbtn_Click(object sender, EventArgs e)
@@ -82,5 +81,11 @@ namespace XDandmed
             Count1++;
             LikeNUM.Text = "" + Count1;
         }
+
+        //private void COMMENTbtn_Click(object sender, EventArgs e)
+        //{
+        //    var thirdActivity = new Intent(this, typeof(comments));
+        //    StartActivity(comments);
+        //}
     }
 }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="383.0dp"
+		android:layout_height="77.0dp"
+		android:id="@+id/linearLayout1">
+		<ImageView
+			android:src="@drawable/shronk"
+			android:layout_width="92.5dp"
+			android:layout_height="match_parent"
+			android:id="@+id/imageView1"
+			android:layout_marginLeft="0.5dp"
+			android:layout_marginRight="0.0dp" />
+		<TextView
+			android:text="Large Text"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="129.5dp"
+			android:layout_height="match_parent"
+			android:id="@+id/textView1"
+			android:layout_marginLeft="10.0dp"
+			android:textColor="#fffbee1a"
+			android:layout_marginTop="8.0dp"  />
+		<TextView
+			android:text="Large Text"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="124.5dp"
+			android:layout_height="match_parent"
+			android:id="@+id/textView2"
+			android:layout_marginTop="0.0dp"
+			android:textColor="#fffbee1a"
+			android:layout_marginLeft="29.5dp" />
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="41.5dp"
+		android:id="@+id/linearLayout3">
+		<TextView
+			android:text="Message:"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/textView1"
+			android:layout_marginTop="0.0dp"
+			android:textColor="#fffbee1a"
+			android:layout_marginBottom="0.0dp" />
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="171.5dp"
+		android:id="@+id/linearLayout4">
+		<TextView
+			android:text="Message"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="385.5dp"
+			android:layout_height="match_parent"
+			android:textColor="#fffaf9f8"
+			android:id="@+id/textView3" />
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="34.0dp"
+		android:id="@+id/linearLayout5"
+		android:layout_marginTop="8.0dp">
+		<Button
+			android:text="LIKE"
+			android:layout_width="wrap_content"
+			android:layout_height="41.0dp"
+			android:id="@+id/button1" />
+		<TextView
+			android:text=""
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="64.0dp"
+			android:layout_height="32.0dp"
+			android:textColor="#fffbee1a"
+			android:id="@+id/textView4" />
+		<Button
+			android:text="comment"
+			android:layout_width="wrap_content"
+			android:layout_height="39.5dp"
+			android:id="@+id/button2"
+			android:layout_marginLeft="135.5dp" />
+	</LinearLayout>
+</LinearLayout>
