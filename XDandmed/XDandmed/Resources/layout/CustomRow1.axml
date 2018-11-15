@@ -12,7 +12,7 @@
 		android:layout_height="77.0dp"
 		android:id="@+id/linearLayout1">
 		<ImageView
-			android:src="@drawable/shronk"
+			android:src="@android:drawable/ic_menu_gallery"
 			android:layout_width="92.5dp"
 			android:layout_height="match_parent"
 			android:id="@+id/imageView1"
@@ -64,7 +64,7 @@
 		<TextView
 			android:text="Message"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="385.5dp"
+			android:layout_width="294.0dp"
 			android:layout_height="match_parent"
 			android:textColor="#fffaf9f8"
 			android:id="@+id/textView3" />

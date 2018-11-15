@@ -48,30 +48,18 @@ namespace XDandmed
             view1.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Date;
             view1.FindViewById<TextView>(Resource.Id.textView3).Text = items[position].Message;
 
-            View view2 = convertView;
-            if (view2 == null)
-                view2 = context.LayoutInflater.Inflate(Resource.Layout.CustomRow2, null);
-
-            view2.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Name;
-            view2.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Date;
-            view2.FindViewById<TextView>(Resource.Id.textView3).Text = items[position].Message;
-
-            //TextView textView = view1.FindViewById<TextView>(Resource.Id.textView3);
-
-            LikeNUM = view1.FindViewById<TextView>(Resource.Id.textView4);
+            int ProfilePicture = (int)typeof(Resource.Drawable).GetField(items[position].picture).GetValue(null);
+            view1.FindViewById<ImageView>(Resource.Id.imageView1).SetImageResource(ProfilePicture);
 
             Button LIKEbtn = view1.FindViewById<Button>(Resource.Id.button1);
+            LikeNUM = view1.FindViewById<TextView>(Resource.Id.textView4);
+            LIKEbtn.Focusable = false;
 
             Button COMMENTbtn = view1.FindViewById<Button>(Resource.Id.button2);
-            //editText.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
-            //{
-            //    textView.Text = e.Text.ToString();
-            //};
-
+            COMMENTbtn.Focusable = false;
+            
             LIKEbtn.Click -= LIKEbtn_Click;
             LIKEbtn.Click += LIKEbtn_Click;
-
-            //COMMENTbtn.Click += COMMENTbtn_Click;
 
             return view1;
         }
@@ -81,11 +69,5 @@ namespace XDandmed
             Count1++;
             LikeNUM.Text = "" + Count1;
         }
-
-        //private void COMMENTbtn_Click(object sender, EventArgs e)
-        //{
-        //    var thirdActivity = new Intent(this, typeof(comments));
-        //    StartActivity(comments);
-        //}
     }
 }

@@ -17,34 +17,42 @@ namespace XDandmed
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-            
-
-            List<Andmed> stuf = new List<Andmed>();
-            stuf.Add(
-                new Andmed
-                {
-                    Message = "defjeslfjeslfjesfjesf",
-                    Date = DateTime.Now.ToString("dd/MM/yy"),
-                    Name = "Viktor Onegin"
-                });
-
-            stuf.Add(
-                new Andmed
-                {
-                    Message = "Elu on raske",
-                    Date = DateTime.Now.ToString("dd/MM/yy"),
-                    Name = "Obama"
-                });
 
 
-            ListView list = FindViewById<ListView>(Resource.Id.listView1);
-            list.Adapter = new CustomAdapter(this, stuf);
-            list.ItemClick += ListView_Click;
+            var postitused = new List<Andmed>();
+            Andmed post1 = new Andmed
+            {
+                Name = "Viktor Onegin",
+                Date = DateTime.Now.ToString("dd/MM/yy"),
+                Message = "defjeslfjeslfjesfjesf"
+            };
+            postitused.Add(post1);
+
+            Andmed post2 = new Andmed
+            {
+                Name = "Viktor Onegin",
+                Date = DateTime.Now.ToString("dd/MM/yy"),
+                Message = "defjeslfjeslfjesfjesf"
+            };
+            postitused.Add(post2);
+
+            Andmed post3 = new Andmed
+            {
+                Name = "Viktor Onegin",
+                Date = DateTime.Now.ToString("dd/MM/yy"),
+                Message = "defjeslfjeslfjesfjesf"
+            };
+            postitused.Add(post3);
+
+            var list = FindViewById<ListView>(Resource.Id.listView1);
+
+            list.Adapter = new CustomAdapter(this, postitused);
+            list.ItemClick += ListView_ItemClick;
 
 
         }
 
-        private void ListView_Click(object sender, AdapterView.ItemClickEventArgs e)
+        private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs args)
         {
             var commentView = new Intent(this, typeof(comments));
             StartActivity(commentView);

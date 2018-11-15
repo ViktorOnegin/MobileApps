@@ -29,8 +29,8 @@ namespace XDandmed
                     Name = "Aleksei Narusberg"
                 });
 
-            ListView list = FindViewById<ListView>(Resource.Id.listView1);
-            list.Adapter = new CustomAdapter(this, comment);
+            ListView list = FindViewById<ListView>(Resource.Id.listView2);
+            list.Adapter = new CommentAdapter(this, comment);
         }
     }
 }
