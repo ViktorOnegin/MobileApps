@@ -12,13 +12,8 @@ using Android.Widget;
 
 namespace XDandmed
 {
-    public class Andmed
+    class Values
     {
-        public string Name { get; set; }
-        public string Date { get; set; }
-        public string Message { get; set; }
-        public string Picture { get; set; }
-
-        public List<Comment> Cmt { get; set; }
+        public static List<Comment> cmt { get; set; }
     }
 }

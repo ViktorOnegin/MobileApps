@@ -12,18 +12,18 @@ using Android.Widget;
 
 namespace XDandmed
 {
-    class CommentAdapter : BaseAdapter<Andmed>
+    class CommentAdapter : BaseAdapter<Comment>
     {
-        List<Andmed> items;
+        List<Comment> items;
         Activity context;
 
-        public CommentAdapter(Activity context, List<Andmed> items) : base()
+        public CommentAdapter(Activity context, List<Comment> items) : base()
         {
             this.context = context;
             this.items = items;
         }
 
-        public override Andmed this[int position]
+        public override Comment this[int position]
         {
             get { return items[position]; }
         }
@@ -41,9 +41,12 @@ namespace XDandmed
             if (view == null)
                 view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow2, null);
 
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Name;
-            view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Date;
-            view.FindViewById<TextView>(Resource.Id.textView3).Text = items[position].Message;
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].name;
+            view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].date;
+            view.FindViewById<TextView>(Resource.Id.textView3).Text = items[position].message;
+
+            int ProfilePicture1 = (int)typeof(Resource.Drawable).GetField(items[position].picture).GetValue(null);
+            view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageResource(ProfilePicture1);
 
             return view;
         }

@@ -40,28 +40,29 @@ namespace XDandmed
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            View view1 = convertView;
-            if (view1 == null)
-                view1 = context.LayoutInflater.Inflate(Resource.Layout.CustomRow1, null);
+            View view = convertView;
+            if (view == null)
+                view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow1, null);
 
-            view1.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Name;
-            view1.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Date;
-            view1.FindViewById<TextView>(Resource.Id.textView3).Text = items[position].Message;
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Name;
+            view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Date;
+            view.FindViewById<TextView>(Resource.Id.textView3).Text = items[position].Message;
 
-            int ProfilePicture = (int)typeof(Resource.Drawable).GetField(items[position].picture).GetValue(null);
-            view1.FindViewById<ImageView>(Resource.Id.imageView1).SetImageResource(ProfilePicture);
+            int ProfilePicture = (int)typeof(Resource.Drawable).GetField(items[position].Picture).GetValue(null);
+            view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageResource(ProfilePicture);
 
-            Button LIKEbtn = view1.FindViewById<Button>(Resource.Id.button1);
-            LikeNUM = view1.FindViewById<TextView>(Resource.Id.textView4);
+            Button LIKEbtn = view.FindViewById<Button>(Resource.Id.button1);
+            LikeNUM = view.FindViewById<TextView>(Resource.Id.textView4);
             LIKEbtn.Focusable = false;
+            LIKEbtn.Tag = position;
 
-            Button COMMENTbtn = view1.FindViewById<Button>(Resource.Id.button2);
-            COMMENTbtn.Focusable = false;
-            
             LIKEbtn.Click -= LIKEbtn_Click;
             LIKEbtn.Click += LIKEbtn_Click;
 
-            return view1;
+            Button COMMENTbtn = view.FindViewById<Button>(Resource.Id.button2);
+            COMMENTbtn.Focusable = false;
+
+            return view;
         }
 
         private void LIKEbtn_Click(object sender, EventArgs e)

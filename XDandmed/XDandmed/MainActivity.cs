@@ -4,43 +4,79 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using System.Collections.Generic;
-using Android.Content;
 using System;
+using Android.Content;
 
 namespace XDandmed
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        public List<Andmed> postitused;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-
-            var postitused = new List<Andmed>();
+            postitused = new List<Andmed>();
             Andmed post1 = new Andmed
             {
                 Name = "Viktor Onegin",
+                Picture = "image3",
                 Date = DateTime.Now.ToString("dd/MM/yy"),
-                Message = "defjeslfjeslfjesfjesf"
+                Message = "app töötab",
+
+                Cmt = new List<Comment>()
+                {
+                     new Comment
+                     {
+                         name = "Bob",
+                         picture = "image",
+                         date = DateTime.Now.ToString("dd/MM/yy"),
+                         message = "How to play fortnite"
+                     }
+                }
             };
             postitused.Add(post1);
 
             Andmed post2 = new Andmed
             {
-                Name = "Viktor Onegin",
+                Name = "ninja",
+                Picture = "image1",
                 Date = DateTime.Now.ToString("dd/MM/yy"),
-                Message = "defjeslfjeslfjesfjesf"
+                Message = "#1 victory royale ",
+
+                Cmt = new List<Comment>()
+                {
+                     new Comment
+                     {
+                         name = "joker",
+                         picture = "image4",
+                         date = DateTime.Now.ToString("dd/MM/yy"),
+                         message = "fortnite is gay"
+                     }
+                }
             };
             postitused.Add(post2);
 
             Andmed post3 = new Andmed
             {
-                Name = "Viktor Onegin",
+                Name = "Dude",
+                Picture = "image5",
                 Date = DateTime.Now.ToString("dd/MM/yy"),
-                Message = "defjeslfjeslfjesfjesf"
+                Message = "i'm not gay",
+
+                Cmt = new List<Comment>()
+                {
+                     new Comment
+                     {
+                         name = "Aafrika neeger",
+                         picture = "image6",
+                         date = DateTime.Now.ToString("dd/MM/yy"),
+                         message = "nibbaswitniggas"
+                     }
+                }
             };
             postitused.Add(post3);
 
@@ -49,12 +85,12 @@ namespace XDandmed
             list.Adapter = new CustomAdapter(this, postitused);
             list.ItemClick += ListView_ItemClick;
 
-
         }
 
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs args)
         {
             var commentView = new Intent(this, typeof(comments));
+            Values.cmt = postitused[args.Position].Cmt;
             StartActivity(commentView);
         }
 
