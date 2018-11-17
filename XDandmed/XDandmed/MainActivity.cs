@@ -52,7 +52,7 @@ namespace XDandmed
                      new Comment
                      {
                          name = "joker",
-                         picture = "image4",
+                         picture = "image2",
                          date = DateTime.Now.ToString("dd/MM/yy"),
                          message = "fortnite is gay"
                      }
@@ -81,9 +81,11 @@ namespace XDandmed
             postitused.Add(post3);
 
             var list = FindViewById<ListView>(Resource.Id.listView1);
-
             list.Adapter = new CustomAdapter(this, postitused);
             list.ItemClick += ListView_ItemClick;
+
+            var AddPostBtn = FindViewById<Button>(Resource.Id.button1);
+            AddPostBtn.Click += addPostBtn_Click;
 
         }
 
@@ -92,6 +94,32 @@ namespace XDandmed
             var commentView = new Intent(this, typeof(comments));
             Values.cmt = postitused[args.Position].Cmt;
             StartActivity(commentView);
+        }
+
+        private void addPostBtn_Click(object sender, System.EventArgs e)
+        {
+            postitused.Add(new Andmed
+            {
+                Name = "Uus Kasutaja",
+                Picture = "image4",
+                Date = DateTime.Now.ToString("dd/MM/yy"),
+                Message = "Text",
+
+                Cmt = new List<Comment>()
+                {
+                    new Comment
+                    {
+                         name = "Uus kasutaja",
+                         picture = "imaga4",
+                         date = DateTime.Now.ToString("dd/MM/yy"),
+                         message = "tekst"
+                    }
+                }
+            });
+
+            var list = FindViewById<ListView>(Resource.Id.listView1);
+            list.Adapter = new CustomAdapter(this, postitused);
+ 
         }
 
     }

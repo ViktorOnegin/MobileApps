@@ -19,10 +19,25 @@ namespace XDandmed
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Comments);
-            
 
+            var list = FindViewById<ListView>(Resource.Id.listView1);
+            list.Adapter = new CommentAdapter(this, Values.cmt);
 
-            var list = FindViewById<ListView>(Resource.Id.listView2);
+            var AddCommentBtn = FindViewById<Button>(Resource.Id.button2);
+            AddCommentBtn.Click += addCommentBtn_Click;
+        }
+
+        private void addCommentBtn_Click(object sender , EventArgs e)
+        {
+            Values.cmt.Add(new Comment
+            {
+                name = "Uus kasutaja",
+                picture = "image4",
+                date = DateTime.Now.ToString("dd/MM/yy"),
+                message = "mingi tekst"
+            });
+
+            var list = FindViewById<ListView>(Resource.Id.listView1);
             list.Adapter = new CommentAdapter(this, Values.cmt);
         }
     }
