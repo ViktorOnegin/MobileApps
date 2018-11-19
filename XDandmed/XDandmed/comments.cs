@@ -23,20 +23,23 @@ namespace XDandmed
             var list = FindViewById<ListView>(Resource.Id.listView1);
             list.Adapter = new CommentAdapter(this, values.cmt);
 
-            var AddCommentBtn = FindViewById<Button>(Resource.Id.button2);
+            var AddCommentBtn = FindViewById<Button>(Resource.Id.button1);
             AddCommentBtn.Click += addCommentBtn_Click;
         }
 
         private void addCommentBtn_Click(object sender , EventArgs e)
         {
+            string AddComment = FindViewById<EditText>(Resource.Id.textView1).Text;
+
             values.cmt.Add(new Comment
             {
                 name = "Uus kasutaja",
                 picture = "image4",
                 date = DateTime.Now.ToString("dd/MM/yy"),
-                message = "mingi tekst"
+                message = AddComment
             });
 
+            
             var list = FindViewById<ListView>(Resource.Id.listView1);
             list.Adapter = new CommentAdapter(this, values.cmt);
         }

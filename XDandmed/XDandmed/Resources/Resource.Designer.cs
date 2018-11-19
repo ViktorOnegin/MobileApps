@@ -2459,11 +2459,11 @@ namespace XDandmed
 			// aapt resource value: 0x7f08003d
 			public const int bottom = 2131230781;
 			
-			// aapt resource value: 0x7f08008b
-			public const int button1 = 2131230859;
-			
 			// aapt resource value: 0x7f08008d
-			public const int button2 = 2131230861;
+			public const int button1 = 2131230861;
+			
+			// aapt resource value: 0x7f080096
+			public const int button2 = 2131230870;
 			
 			// aapt resource value: 0x7f080063
 			public const int buttonPanel = 2131230819;
@@ -2618,23 +2618,23 @@ namespace XDandmed
 			// aapt resource value: 0x7f080018
 			public const int line3 = 2131230744;
 			
-			// aapt resource value: 0x7f08008e
-			public const int linearLayout1 = 2131230862;
+			// aapt resource value: 0x7f08008b
+			public const int linearLayout1 = 2131230859;
+			
+			// aapt resource value: 0x7f080091
+			public const int linearLayout3 = 2131230865;
 			
 			// aapt resource value: 0x7f080092
-			public const int linearLayout3 = 2131230866;
+			public const int linearLayout4 = 2131230866;
 			
-			// aapt resource value: 0x7f080093
-			public const int linearLayout4 = 2131230867;
-			
-			// aapt resource value: 0x7f080095
-			public const int linearLayout5 = 2131230869;
+			// aapt resource value: 0x7f080094
+			public const int linearLayout5 = 2131230868;
 			
 			// aapt resource value: 0x7f08001d
 			public const int listMode = 2131230749;
 			
-			// aapt resource value: 0x7f08008c
-			public const int listView1 = 2131230860;
+			// aapt resource value: 0x7f08008e
+			public const int listView1 = 2131230862;
 			
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
@@ -2837,17 +2837,17 @@ namespace XDandmed
 			// aapt resource value: 0x7f080069
 			public const int textSpacerNoTitle = 2131230825;
 			
+			// aapt resource value: 0x7f08008c
+			public const int textView1 = 2131230860;
+			
 			// aapt resource value: 0x7f080090
-			public const int textView1 = 2131230864;
+			public const int textView2 = 2131230864;
 			
-			// aapt resource value: 0x7f080091
-			public const int textView2 = 2131230865;
+			// aapt resource value: 0x7f080093
+			public const int textView3 = 2131230867;
 			
-			// aapt resource value: 0x7f080094
-			public const int textView3 = 2131230868;
-			
-			// aapt resource value: 0x7f080096
-			public const int textView4 = 2131230870;
+			// aapt resource value: 0x7f080095
+			public const int textView4 = 2131230869;
 			
 			// aapt resource value: 0x7f0800a4
 			public const int text_input_password_toggle = 2131230884;

@@ -98,12 +98,14 @@ namespace XDandmed
 
         private void addPostBtn_Click(object sender, System.EventArgs e)
         {
+            string AddComment = FindViewById<EditText>(Resource.Id.textView1).Text;
+
             postitused.Add(new Andmed
             {
                 Name = "Uus Kasutaja",
                 Picture = "image4",
                 Date = DateTime.Now.ToString("dd/MM/yy"),
-                Message = "Text",
+                Message = AddComment,
 
                 Cmt = new List<Comment>()
                 {
@@ -112,7 +114,7 @@ namespace XDandmed
                          name = "Uus kasutaja",
                          picture = "imaga4",
                          date = DateTime.Now.ToString("dd/MM/yy"),
-                         message = "tekst"
+                         message = "text"
                     }
                 }
             });
