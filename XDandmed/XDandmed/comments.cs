@@ -21,7 +21,7 @@ namespace XDandmed
             SetContentView(Resource.Layout.Comments);
 
             var list = FindViewById<ListView>(Resource.Id.listView1);
-            list.Adapter = new CommentAdapter(this, Values.cmt);
+            list.Adapter = new CommentAdapter(this, values.cmt);
 
             var AddCommentBtn = FindViewById<Button>(Resource.Id.button2);
             AddCommentBtn.Click += addCommentBtn_Click;
@@ -29,7 +29,7 @@ namespace XDandmed
 
         private void addCommentBtn_Click(object sender , EventArgs e)
         {
-            Values.cmt.Add(new Comment
+            values.cmt.Add(new Comment
             {
                 name = "Uus kasutaja",
                 picture = "image4",
@@ -38,7 +38,7 @@ namespace XDandmed
             });
 
             var list = FindViewById<ListView>(Resource.Id.listView1);
-            list.Adapter = new CommentAdapter(this, Values.cmt);
+            list.Adapter = new CommentAdapter(this, values.cmt);
         }
     }
 }

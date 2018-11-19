@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace XDandmed
 {
-    class Values
+    class values
     {
         public static List<Comment> cmt { get; set; }
     }

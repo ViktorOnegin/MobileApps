@@ -92,7 +92,7 @@ namespace XDandmed
         private void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs args)
         {
             var commentView = new Intent(this, typeof(comments));
-            Values.cmt = postitused[args.Position].Cmt;
+            values.cmt = postitused[args.Position].Cmt;
             StartActivity(commentView);
         }
 
