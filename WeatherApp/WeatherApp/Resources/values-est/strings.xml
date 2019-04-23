@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="app_name">Ilm</string>
+  <string name="search">otsi</string>
+  <string name="temp">temp :</string>
+  <string name="wind_speed">tuule kiirus :</string>
+  <string name="pressure">rõhk :</string>
+  <string name="visibility">nähtavus :</string>
+  <string name="humidity">niiskus :</string>
+  <string name="forecast">prognoos</string>
+</resources>
